@@ -1,36 +1,41 @@
-$(document).ready(function() {
-  $(window).resize(function() {
-    // var imgHeight = 0;
-	// var imgWidth = 0;
 
-    // var elems = $('.artImage'), i;
-    // for (i in elems) {
-    //     if(imgHeight < i.style.height) {
-    //     	imgHeight = i.style.height;
-    //     }
-    //     if(imgwidth < i.style.width) {
-    //     	imgwidth = i.style.width;
-    //     }
-    // }
+var currentImageIndex = -1,
+    maxImageIndex = 0,
+    images = [],
+    changeInterval = 4000;
 
-    // var elems = $('.tallestImg');
-    var imgHeight = $('.tallestImg').height();
-    console.log($('.tallestImg').height());
-    console.log("HIIII");
-    //$('.carousel').height(imgHeight);
+// Prepares relevant variables to cycle throguh images
+var setUp = function() {
+    var getDivId = document.getElementById("wrapper");
+    images = getDivId.getElementsByTagName("img");
+    maxImageIndex = images.length;
+    currentImageIndex = 0;
+};
 
-  });
-});
+    // Changes the banner currently being displayed
+var changeBanner = function() {
+    var i;
 
-// _____________
-// var imageGrad = $('.image-grad'),
-//     image = $('.header-img');
+    $(images[currentImageIndex]).fadeTo(1000,0, function() {
+        $(images[currentImageIndex]).css("display", "none");
+        currentImageIndex = (currentImageIndex >= maxImageIndex - 1) ? 0 : currentImageIndex += 1;
+        $(images[currentImageIndex]).css("dispay", "inline");
+        $(images[currentImageIndex]).fadeTo(1000,1.00);
+    });
+    
 
-// function resizeDiv () {
-//     imageGrad.height(image.height());
-//     imageGrad.width(image.width());
-// }
+    
+    
+    //for (i = 0; i < maxImageIndex; i += 1) {
+    //    images[i].hidden = (i !== currentImageIndex);
+    //}
+};
 
-// resizeDiv();
+// A function which is triggered following the `load` event
+window.onload = function() {
+    setUp();
 
-// $(window).resize(function() { resizeDiv(); });
+    images[currentImageIndex].hidden = false; // show the first banner image;
+
+    setInterval(changeBanner, changeInterval); // following a delay, keep changing the banner image by the specified interval
+};
