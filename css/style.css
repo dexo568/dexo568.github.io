@@ -53,10 +53,10 @@
 }
 
 .container {
-	border: 2px solid #000000; 
+	border: 2px solid #E0162B; 
 	margin-top: 50px;
 	margin-bottom: 50px;
-	padding: 30px;
+	padding: 0px;
 	width: 90%;
 }
 
