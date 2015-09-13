@@ -5,7 +5,7 @@
 
 @font-face {
 	font-family: menuFont;
-	src: url('../fonts/Champignon.otf');
+	src: url('../fonts/GeosansLight.ttf');
 }
 
 @font-face {
@@ -15,6 +15,15 @@
 
 .fa {
 	display: inline !important;
+}
+
+.game-description {
+	display: block;
+	margin-right:200px;
+}
+
+.game-picture {
+	float: right;
 }
 
 .content, .footer, .menu {
@@ -112,10 +121,20 @@ a:hover {
 	color: #E0162B !important;
 }
 
+.curPage {
+	text-decoration: none;
+	color: #000000 !important;
+}
+
+.curPage:hover {
+	text-decoration: none !important;
+	color: #FFFFFF !important;
+}
+
 .menuLink {
 	margin: 0 15px;
 	font-family: menuFont;
-	font-size: 300%;
+	font-size: 200%;
 }
 
 #highlight {
@@ -210,9 +229,8 @@ hr {
 	max-width: 100%;
 }
 
-/******** Games *********/
 .game {
-	height: 325px;
+	height: 200px;
 }
 
 .gameCover {
