@@ -1,0 +1,146 @@
+@font-face{
+	font-family: "ProximaNova";
+	src: url(../proximanova.ttf);
+}
+
+body{
+	font-family: "ProximaNova";
+	background-color: #f2f2f2;
+	margin: 0px;
+}
+
+.headline{
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+	padding-top: 1em;
+	color: #4a4a4a;
+}
+.subheadline{
+	width: 100%;
+	text-align: center;
+	font-size: 1em;
+	color: #4a4a4a;
+	padding-bottom: 2em;
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+
+.grid-child {
+	width: 100%;
+	background-size: cover;
+	height: 19.8vw;
+}
+
+@media (max-width: 600px){
+	.grid-parent {
+  		display: grid;
+  		grid-template-columns: auto;
+	}
+	.grid-child {
+		height: 59.4vw;
+	}
+
+	#project-row-2 img{
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 900px) and (min-width: 600px){
+	.grid-parent {
+  		display: grid;
+  		grid-template-columns: auto auto;
+	}
+	.grid-child {
+		height: 29.7vw;
+	}
+}
+
+#project-details-wrapper{
+}
+
+#project-name{
+	color: #4a4a4a;
+	font-size: 2em;
+	width: 100%;
+	text-align: center;
+	background-color: #A7DBD8;
+	padding: 16px 0px;
+}
+
+#project-row-1{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	border-bottom: .2em solid #4a4a4a;
+}
+
+#project-row-2{
+	border-bottom: 1em solid #A7DBD8;
+}
+
+#project-icon{
+	width: 100%;
+	background-size: cover;
+	height: 30vw;
+}
+
+#project-highlights{
+	font-size: 1.5em;
+	padding: 20px;
+}
+
+#project-summary{
+	font-size: 1.5em;
+	padding: 20px;
+	pointer-events: none;
+}
+
+#aboutme_wrapper{
+	text-align: center;
+	width: 33%;
+	margin: auto;
+	min-width: 500px;
+}
+
+#aboutme_img{
+	width: 100%;
+}
+
+#aboutme_text{
+	text-align: left;
+}
+
+.aboutme_link a{
+	color: #3db2e1;
+	text-decoration: none;
+}
+
+#contact_table{
+	text-align: left;
+	width: 30%;
+	margin: auto;
+	border-spacing: 10px;
+}
+
+.contact-icon{
+	width: 50px;
+}
+@media (max-width: 1200px){
+	.open{
+		flex-direction: column;
+	}
+	.open li:nth-child(3){
+		display: none !important;
+	}
+	#project-row-1{
+		grid-template-columns: auto;
+	}
+	#project-icon{
+		height: 60vw;
+	}
+}
+
