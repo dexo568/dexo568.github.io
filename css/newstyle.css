@@ -36,7 +36,7 @@ body{
 	height: 19.8vw;
 }
 
-@media (max-width: 600px){
+@media only screen and (max-width: 600px){
 	.grid-parent {
   		display: grid;
   		grid-template-columns: auto;
@@ -50,7 +50,7 @@ body{
 	}
 }
 
-@media (max-width: 900px) and (min-width: 600px){
+@media only screen and (max-width: 900px) and (min-width: 600px){
 	.grid-parent {
   		display: grid;
   		grid-template-columns: auto auto;
@@ -129,7 +129,7 @@ body{
 .contact-icon{
 	width: 50px;
 }
-@media (max-width: 1200px){
+@media only screen and (max-width: 1200px){
 	.open{
 		flex-direction: column;
 	}
