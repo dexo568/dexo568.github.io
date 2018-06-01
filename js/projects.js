@@ -26,7 +26,7 @@ var projects = {
 		a 20-foot fake palm tree that housed a camera on a belt track. The camera went up the beltway, stopping at 5 preset 
 		positions to snap pictures of consumers below. The images were then stitched together into a GIF showing first the user 
 		close-up and then pulling back to show the festival around them. This GIF was then emailed or texted to the user. We 
-		pulled this all of using a Surface 3 as a control tablet, a Raspberry Pi as the camera control, and two Arduinos as 
+		pulled this all off using a Surface 3 as a control tablet, a Raspberry Pi as the camera control, and two Arduinos as 
 		belt controllers.`,
 		images: ['malibu1.jpg', 'malibu4.jpg', 'malibu5.jpg', 'malibu2.jpg', 'malibu3.jpg']
 	},
